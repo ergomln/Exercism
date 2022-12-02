@@ -84,3 +84,15 @@ const isIsogram = (input) => {
     let inputReplace = input.replace(/ |-/g, "")
     return new Set(inputReplace.toLowerCase()).size === inputReplace.length
 };
+
+
+/*
+Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan gramma, "every letter") is a sentence using every letter of the alphabet at least once. The best known English pangram is:
+
+The quick brown fox jumps over the lazy dog.
+*/
+
+const isPangram = (str) => {
+    str = str.toLowerCase().replace(/[^a-z]/g,'')
+    return new Set(str).size === 26   
+};
